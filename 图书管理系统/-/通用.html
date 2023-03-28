@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图书馆登陆页面</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/axios/1.3.2/axios.js"></script>
+    <link rel="stylesheet" href="通用.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:100,300,400,500,700,900">
+    <script src="通用.js" type="text/javascript"></script>
+</head>
+<body>
+    <!--第一部分：顶部-->
+    <div class="top">
+        <!--第一行用户及搜索-->
+        <div class="header">
+            <div class="headerFront">
+                <a href="https://www.lib.pku.edu.cn/portal/cn/mylib"><button class="smallBut"><img src="https://derrrrrrr.oss-cn-beijing.aliyuncs.com/%E7%94%A8%E6%88%B7.png" alt="">
+                    我的图书馆</button></a>
+            </div>
+            <div class="headerBehind">
+                <a href="https://xmsoushu.com/"><button class="smallBut"><img src="https://derrrrrrr.oss-cn-beijing.aliyuncs.com/%E6%90%9C%E7%B4%A2.png" alt="">
+                    搜索</button></a>
+            </div>
+        </div>
+        <!--第二行图标-->
+        <div class="title">
+            <img src="https://derrrrrrr.oss-cn-beijing.aliyuncs.com/%E4%BA%91%E9%A1%B6%E4%B9%A6%E9%99%A2.png" alt="" class="iconOne">
+            <img src="https://derrrrrrr.oss-cn-beijing.aliyuncs.com/%E7%9F%A9%E5%BD%A2%202.png" alt="" class="iconTwo">
+            <img src="https://derrrrrrr.oss-cn-beijing.aliyuncs.com/%E5%9B%BE%E4%B9%A6%E9%A6%86.png" alt="" class="iconThree">
+        </div>
+        <!--第三行导航栏-->
+        <div class="blank">
+            <div class="nav">
+                <!--前面的搜索资源-->
+                <div class="front">
+                    <div class="searchPicture">
+                        <a href="https://xmsoushu.com/"><button class="searchPictureBut"><img src="./picture/搜索 拷贝 2.png" alt=""></button></a>
+                    </div>
+                    <div class="searchText">搜索图书馆资源</div>
+                    <div class="menu">
+                        <a href="https://www.jiumodiary.com/"><button class="menuBut"><img src="https://derrrrrrr.oss-cn-beijing.aliyuncs.com/%E7%AE%AD%E5%A4%B42.png" alt=""></button></a>
+                    </div>
+                </div>
+                <!--后面的五个板块-->
+                <div class="behind">
+                    <div class="smallBox"><a href="https://www.bilibili.com/?utm_source=gold_browser_extension"><button class="navBut">系统管理</button></a></div>
+                    <div class="smallBox"><button class="navBut">读者管理</button></div>
+                    <div class="smallBox"><button class="navBut">图书管理</button></div>
+                    <div class="smallBox"><button class="navBut">借阅管理</button></div>
+                    <div class="smallBox"><button class="navBut">公告管理</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--第二部分：主体部分-->
+    <div class="container">
+        <!--问题框-->
+        <div class="column">
+            <!--第一行标题：我的图书馆-->
+            <div class="myLiberary">&nbsp;&nbsp;&nbsp;&nbsp;我的图书馆</div>
+            <!--主要部分-->
+            <div class="main">
+                <div class="box">
+                    <!--表单-->
+                    <input type="text" name="account" placeholder="请输入您的账号" id="one">
+                    <br>
+                    <input type="password" name="password" placeholder="请输入密码" id="two">
+                    <!--选择-->
+                    <form id="three"> 
+                        <label> 
+                            <input type="radio" name="option" value="1" id="three_one">读者
+                        </label> 
+                        <label> 
+                            <input type="radio" name="option" value="2" id="three_two">管理员
+                        </label> 
+                    </form> 
+                    <!--登录按钮-->
+                    <button id="land" onclick="landing()">登录</button>
+                </div>
+                <!--底部小字注册或忘记密码-->
+                <div class="bottom">
+                    <a href="register/html/bookManagementRegister.html" class="left">无账号，读者注册</a>
+                    <a href="getpassword/html/bookManagementRetrievePassword.html" class="right">忘记密码</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

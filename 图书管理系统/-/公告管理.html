@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>公告管理</title>
+    <link rel="stylesheet" href="公告管理.css">
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script> 
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/axios/1.3.2/axios.js"></script>
+    <link rel="stylesheet" href="css/bootstrap-table.min.css">
+	</head>
+	<style type="text/css"></style>
+	<body>
+		<div class="img" id="img">
+      <div id="header">
+        <div id="headerInfor">
+          <div class="yunding"></div>
+          <div class="pic"></div>
+          <div id="searchSkip">搜索</div>
+          <!--搜索按钮跳转-->
+          <div id="about">关于</div>
+          <!--关于-->
+        </div>
+        <div id="navgation">
+          <div class="search">搜索图书馆资源</div>
+          <div id="navTwo" class="nav">
+            <div id="nav1">读者管理</div>
+            <div id="nav2">读者列表</div>
+          </div>
+          <div id="navThree" class="nav">
+            <div id="nav1">图书管理</div>
+            <div id="nav2">书籍列表</div>
+          </div>
+          <div id="navFour" class="nav">
+            <div id="nav1">借阅管理</div>
+            <div id="nav2">借阅审批</div>
+          </div>
+          <div id="navFive" class="nav">公告管理</div>
+        </div>
+      </div>
+      <div id="centerArea">
+        <div class="bookManagementIndexContainer">
+          <div class="Content">
+              <div class="bookManagementReaderManagement">
+                  <div class="bookManagementReaderManagementTop">
+                      <ol class="bookManagementReaderManagementTopSel">
+                          <li>
+                              <a herf="#">首页</a>
+                          </li>
+                          <li class="active">
+                              <a herf="#">公告管理</a>
+                          </li>
+                      </ol>
+                  </div>
+                  <div class="bookManagementReaderManagementInquire">
+                      <input type="text" placeholder="请输入学号" id="schoolid" class="readerInput">
+                      <input type="text" placeholder="请输入姓名" id="studentName" class="readerInput">
+                      <input type="text" placeholder="请输入电话号码" id="studentPhoneNumber" class="readerInput">
+                      <input type="text" placeholder="请输入班级" id="studentName" class="readerInput">
+                      <button id="readerInquire"><img src="https://tallgao.oss-cn-beijing.aliyuncs.com/%E6%90%9C%E7%B4%A2%20%E6%8B%B7%E8%B4%9D%202.png">搜索</button>
+                  </div>
+
+
+
+
+
+
+                  <div id="addAndDelete">
+                    <button id="add" onclick="check()">增加</button>
+                  </div>
+                  <div id="bgc_white"></div>
+
+
+
+
+
+                  <div class="bookManagementReaderManagementInquireTable" class=table-responsive>
+                      <table class="table text-nowrap table-condensed" border="3" id="tableone" style="table-layout: auto; word-break:break-all;" >
+                          <thead>
+                              <tr>
+                                  <th>
+                                      <input type="checkbox" style="width: 25px;height: 25px;box-shadow: 0 0 2px 0 #666">
+                                  </th>
+                                  <th style="width: 68px">ID</th>
+                                  <th style="width: 115px">公告内容</th> 
+                                  <th style="width: 90px">发布人</th>
+                                  <th style="width: 18px">发布人</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                          </tbody>
+                      </table>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+
+
+
+
+
+
+
+      <div class="demoone">
+          <div class="demo-bgone">
+              <div class="promptEdit" id="promptEditclass">
+
+
+                      <div class="promptEditTop">
+                          <div class="promptEditTopTitle">编辑</div>
+                      </div>
+
+
+
+                      <div class="promptEditContent">
+                          <div class="promptEditContentform">
+                              <div>ID*：&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input class="promptEditContentname" value="管理员id" id="input_id"></div>
+                              <div class="promptEditContentclassclass">发布时间*：<input class="promptEditContentclass" value="时间"></div>
+                              <div class="promptEditContentidid">
+                                  发布*：&nbsp<input class="promptEditContentid" value="发布人" id="input_name">
+                              </div>
+                              <button class="promptcheckTopSure"  onclick="closeone()" type="button">确定</button> 
+                          </div>
+                      </div>
+              </div>
+          </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+      <div class="demo">
+          <div class="demo-bgtwo">
+              <div class="promptCheck" id="promptcheckclass">
+                      <div class="promptcheckTop">
+                        <div class="prompcheckTopTitle">增加公告</div>
+                      </div>
+                     <div class="promptcheckContent">
+                        <div class="promptcheckContent_container">
+                          <div class="promptcheckContent_char">
+                            <div class="promptcheckContent_char_time">发布时间</div>
+                            <div class="promptcheckContent_char_content">公告内容</div>
+                          </div>
+                          <div class="promptcheckContent_input">id
+                            <div class="person_char">发布人</div>
+                            <input type="text" class="timer" >
+                            <input type="text" class="person"></input>
+                            <textarea id="annouse" cols="30" rows="10"></textarea>
+                          </div>
+                        </div>
+                        <button class="promptcheckTopClose"  onclick="closetwo()" type="button">发布</button> 
+                    </div>  
+              </div>
+          </div>
+      </div>
+
+
+
+
+
+
+
+
+
+  </body>
+  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+  <script src="js/bootstrap-table.js"></script>
+  <script src="js/bootstrap-table-zh-CN.js"></script>
+  <script>
+    const table = document.getElementById("tableone");//拿表格
+    const tbody = document.getElementsByTagName("tbody");//拿元素
+    const bt = document.getElementById("readerInquire");//搜索按钮
+    const id = document.getElementById("schoolid");//搜索框
+    const name = document.getElementById("studentName");
+    const cla = document.getElementById("studentClass");
+    const ser = document.getElementsByTagName("thead");
+    const test = document.getElementById("test");
+    const test1 = document.getElementById("test1");
+    window.addEventListener("load", () => {
+      axios({
+        url:"http://dueg4e.natappfree.cc/Book_Management_System_war_exploded/announcement/servlet/listAnnouncementServlet/",
+        //url: "https://api.reginvolver.cn/user/list",
+        method: "GET",
+      }).then((result) => {
+        console.log(result);
+        const arr = result.data;
+        //console.log(arr);
+
+
+
+
+
+
+
+        bt.onclick=()=>{
+            for(let n=0;n<arr.length;n++){
+              if(name.value==arr[n].publisher){
+                const tr = document.createElement("tr");
+          //alert(name.value);
+            tr.innerHTML = `<tr>
+    <td> <input type="checkbox" style="width: 25px;height: 25px;box-shadow: 0 0 2px 0 #666"></td>
+    <td>${arr[n].content}</td>
+    <td>${arr[n].publisher}</td>
+    <td>${arr[n].time}</td>
+    <td><div class="operateButton">
+                                          <button class="deleteButton" id="checkbtn" onclick="dele('${arr[n].time}')">
+                                              删除
+                                          </button>
+                                          <button class="alertButton">
+                                            一键提醒
+                                          </button>
+                                      </div></td>
+    </tr>`
+      ser[0].appendChild(tr);
+              }
+            }
+          }
+
+
+
+
+          //以下主体-----------------------------------------------------------------------
+
+
+
+
+        for (let i = 0; i < arr.length; i++) {
+          const tr = document.createElement("tr");
+          //console.log(arr[0].publisher);         
+            tr.innerHTML = `<tr>
+    <td> <input type="checkbox" style="width: 25px;height: 25px;box-shadow: 0 0 2px 0 #666"></td>
+    <td>${arr[i].content}</td>
+    <td>${arr[i].publisher}</td>
+    <td>${arr[i].time}</td>
+    <td><div class="operateButton">
+                                          <button class="deleteButton" id="checkbtn" onclick="dele('${arr[i].time}')">
+                                              删除
+                                          </button>
+                                          <button class="alertButton">
+                                            一键提醒
+                                          </button>
+                                      </div></td>
+    </tr>`
+    tbody[0].appendChild(tr);
+      }
+      $("#tableone").bootstrapTable({
+          pagination: true,   //是否显示分页条
+          pageSize:5 ,   //一页显示的行数
+          paginationLoop: false,   //是否开启分页条无限循环，最后一页时点击下一页是否转到第一页
+          pageList: [5, 10, 20],  //选择每页显示多少行，数据过少时可能会没有效果
+          toolbar:'#toolbar',
+          sortable: true,   
+          //showRefresh: false,  
+          columns:[
+            {
+              field: 'id',
+              align: 'center',
+              width:'20px'
+            },{
+              field:'title',
+              title:'公告',
+              align: 'left',
+              width:'205px',
+            },{
+              field:'root',
+              title:'发布者',
+              align: 'left',
+              width:'205px',
+            },{
+              field:'time',
+              title:'发布时间',
+              align: 'left',
+              width:'205px',
+            },{
+              field:'motion',
+              title:'操作',
+              align: 'left',
+              width:'230px',
+            }
+          ]
+  });
+})
+})
+  </script>
+  <script src="公告管理.js" type="text/javascript"></script>
+      </div>
+    </div>
+	</body>
+  <script
+    type="text/javascript"
+    src="https://fastly.jsdelivr.net/npm/echarts@5.4.1/dist/echarts.min.js"
+  ></script>
+  <script src="跳转.js" type="text/javascript"></script>
+</html>

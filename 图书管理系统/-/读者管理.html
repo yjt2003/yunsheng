@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>读者管理</title>
+    <link rel="stylesheet" href="读者管理.css">
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/axios/1.3.2/axios.js"></script>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap-table.min.css">
+    <!--<script src="../js/bootstrap-table.js"></script>-->
+	</head>
+	<style type="text/css"></style>
+	<body>
+		<div class="img" id="img">
+      <div id="header">
+        <div id="headerInfor">
+          <div class="yunding"></div>
+          <div class="pic"></div>
+          <div id="searchSkip">搜索</div>
+          <!--搜索按钮跳转-->
+          <div id="about">关于</div>
+          <!--关于-->
+        </div>
+        <div id="navgation">
+          <div class="search">搜索图书馆资源</div>
+          <div id="navTwo" class="nav">
+            <div id="nav1">读者管理</div>
+            <div id="nav2">读者列表</div>
+          </div>
+          <div id="navThree" class="nav">
+            <div id="nav1">图书管理</div>
+            <div id="nav2">书籍列表</div>
+          </div>
+          <div id="navFour" class="nav">
+            <div id="nav1">借阅管理</div>
+            <div id="nav2">借阅审批</div>
+          </div>
+          <div id="navFive" class="nav">公告管理</div>
+        </div>
+      </div>
+      <div id="centerArea">
+        
+        <div class="bookManagementIndexContainer">
+          <div class="Content">
+              <div class="bookManagementReaderManagement">
+                  <div class="bookManagementReaderManagementTop">
+                      <ol class="bookManagementReaderManagementTopSel">
+                          <li>
+                              <a herf="#">首页</a>
+                          </li>
+                          <li>
+                              <a herf="#">读者管理</a>
+                          </li>
+                          <li class="active">
+                              <a herf="#">读者列表</a>
+                          </li>
+                      </ol>
+                  </div>
+                  <div class="bookManagementReaderManagementInquire">
+                      <input type="text" placeholder="请输入学号" id="schoolid" class="readerInput">
+                      <input type="text" placeholder="请输入姓名" id="studentName" class="readerInput">
+                      <input type="text" placeholder="请输入邮箱" id="studentEmail" class="readerInput">
+                      <input type="text" placeholder="请输入ID" id="studentID" class="readerInput">
+                      <button id="readerInquire"><img src="https://tallgao.oss-cn-beijing.aliyuncs.com/%E6%90%9C%E7%B4%A2%20%E6%8B%B7%E8%B4%9D%202.png">搜索</button>
+                  </div>
+                  <div id="bgc_grey"></div>
+                  <div id="bgc_white"></div>
+                  <div class="bookManagementReaderManagementInquireTable" class=table-responsive>
+                      <table border="1" id="tableone" style="table-layout: auto; word-break:break-all;" class="table text-nowrap" data-row-style="rowStyle">
+                          <thead class="thead">
+                              <tr class="danger">
+                                  <th style="width: 100px;">姓名</th>
+                                  <th style="width: 115px">学号</th> 
+                                  <th style="width: 168px">邮箱</th>
+                                  <th style="width: 68px">ID</th>
+                                  <th style="width: 68px">密码</th>
+                                  <th style="width:92px">待还书籍</th>
+                                  <th style="width: 100px;">审核状态</th>
+                                  <th style="width: 446px">操作</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                          </tbody>
+                      </table>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div class="demoone">
+          <div class="demo-bgone">
+              <div class="promptEdit" id="promptEditclass">
+                      <div class="promptEditTop">
+                          <div class="promptEditTopTitle">编辑</div>
+                          <button class="promptEditTopClose"  onclick="closeone()" type="button">关闭</button>
+                      </div>
+                      <div class="promptEditContent">
+                          <div class="promptEditContentform">
+                              <div>姓名*：&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input class="promptEditContentname" value="懒洋洋"></div>
+                              <div class="promptEditContentgendergender">性别*:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input class="promptEditContentgender" value="男" id="status"></div>
+                              <div class="promptEditContentclassclass">班级*：&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input class="promptEditContentclass" value="软件2201" id="clas"></div>
+                              <div class="promptEditContentidid">
+                                  身份证号*：&nbsp<input class="promptEditContentid" value="486957325647896523" id="number">
+                              </div>
+                              <div class="promptEditContentschoolidid">学号*：&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input class="promptEditContentschoolid" value="2022000001" id="role"></div>
+                              <div>审核状态*：&nbsp<input class="promptEditContentcheck" value="已审核"></div>
+                              <div>启用状态*：&nbsp<input class="promptEditContentstart" value="已启用"></div>
+                          </div>
+                      </div>
+              </div>
+          </div>
+      </div>
+
+
+
+
+      <div class="demo">
+          <div class="demo-bgtwo">
+              <div class="promptcheck" id="promptcheckclass">
+                      <div class="promptcheckTop">
+                          <div class="prompcheckTopTitle">审核</div>
+                      </div>
+                      <div class="promptcheckContent">
+                          <button class="promptcheckContentok" id="pass">启用</button>
+                          <button class="promptcheckContentno" id="not_pass">禁用</button>
+                          <button class="promptcheckTopClose"  onclick="closetwo()" type="button">确定</button>
+                        </div>
+                    </div>
+              </div>
+          </div>
+      </div>
+
+
+
+  </body>
+  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+  <script src="js/bootstrap-table.js"></script>
+  <script src="js/bootstrap-table-zh-CN.js"></script>
+  <!--fengexian-->
+  <script>
+    const table = document.getElementById("tableone");//拿表格
+    const tbody = document.getElementsByTagName("tbody");//拿元素
+    const bt = document.getElementById("readerInquire");//搜索按钮
+    const id = document.getElementById("schoolid");//学号
+    const name = document.getElementById("studentName");//姓名
+    const email = document.getElementById("studentEmail");//
+    const studentID = document.getElementById("studentID");
+    const ser = document.getElementsByTagName("thead");
+    const test = document.getElementById("test");
+    const test1 = document.getElementById("test1");
+    window.addEventListener("load", () => {
+      axios({
+        url:"http://dueg4e.natappfree.cc/Book_Management_System_war_exploded/userManage/servlet/listUserServlet/",
+        //url: "https://api.reginvolver.cn/user/list",
+        method: "GET",
+      }).then((result) => {
+        console.log(result.data);
+        const arr = result.data;
+        //console.log(arr[0]);
+        bt.onclick=()=>{//查找
+            //alert(66);
+            for(let n=0;n<arr.length;n++){
+              if(name.value==arr[n].name||id.value==arr[n].stuID||email.value==arr[n].email||studentID.value==arr[n].account){
+                const tr = document.createElement("tr");
+                  if(arr[n].status==true){
+                    tr.innerHTML = `<tr>
+    <td>${arr[n].name}</td>
+    <td>${arr[n].account}</td>
+    <td>${arr[n].email}</td>
+    <td>${arr[n].stuID}</td>
+    <td>${arr[n].password}</td>
+    <td>${arr[i].bookForReturn}</td>
+    <td><button class="checkyes">已启用</button></td>   
+    <td><div class="operateButton">                                        
+                                          <button class="checkButton" id="checkbtn" onclick="check()">
+                                            <img src="https://tallgao.oss-cn-beijing.aliyuncs.com/%E7%BC%96%E8%BE%91%20(1).png">审核
+                                          </button>
+                                      </div></td>
+    </tr>`
+                  }else if(arr[n].status==false){
+                    tr.innerHTML = `<tr>
+    <td>${arr[n].name}</td>
+    <td>${arr[n].account}</td>
+    <td>${arr[n].email}</td>
+    <td>${arr[n].stuID}</td>
+    <td>${arr[n].password}</td>
+    <td>${arr[i].bookForReturn}</td>
+    <td><button class="checkyno">未启用</button></td>   
+    <td><div class="operateButton">
+                                          <button class="checkButton" id="checkbtn" onclick="check()">
+                                            <img src="https://tallgao.oss-cn-beijing.aliyuncs.com/%E7%BC%96%E8%BE%91%20(1).png">审核
+                                          </button>
+                                      </div></td>
+    </tr>`
+                  }
+      ser[0].appendChild(tr);
+              }
+            }
+          }
+
+
+
+
+
+
+        for (let i = 0; i < arr.length; i++) {
+          const tr = document.createElement("tr");
+          //console.log("tbody=",tbody);         
+           if(arr[i].status==false){
+            tr.innerHTML = `<tr>
+    <td>${arr[i].name}</td>
+    <td>${arr[i].account}</td>
+    <td>${arr[i].email}</td>
+    <td>${arr[i].stuID}</td>
+    <td>${arr[i].password}</td>
+    <td>${arr[i].bookForReturn}</td>
+    <td><button class="checkyes">已启用</button></td>
+    <td><div class="operateButton">
+                                          <button class="checkButton" id="checkbtn" onclick="check(${arr[i].account},${arr[i].password},'${arr[i].name}',${arr[i].stuID},'${arr[i].email}','${arr[i].bookForReturn}',${arr[i].status})">
+                                            <img src="https://tallgao.oss-cn-beijing.aliyuncs.com/%E7%BC%96%E8%BE%91%20(1).png">审核
+                                          </button>
+                                      </div></td>
+    </tr>`
+           }else if(arr[i].status==true){
+            tr.innerHTML = `<tr>
+    <td>${arr[i].name}</td>
+    <td>${arr[i].account}</td>
+    <td>${arr[i].email}</td>
+    <td>${arr[i].stuID}</td>
+    <td>${arr[i].password}</td>
+    <td>${arr[i].bookForReturn}</td>
+    <td><button class="checkno">未启用</button></td>
+    <td><div class="operateButton">
+                                          <button class="checkButton" id="checkbtn" onclick="check(${arr[i].account},${arr[i].password},'${arr[i].name}',${arr[i].stuID},'${arr[i].email}','${arr[i].bookForReturn}',${arr[i].status})">
+                                            <img src="https://tallgao.oss-cn-beijing.aliyuncs.com/%E7%BC%96%E8%BE%91%20(1).png">审核
+                                          </button>
+                                      </div></td>
+    </tr>`
+        }
+    tbody[0].appendChild(tr);
+      //const edit = document.getElementsByClassName(".editButton")[i];
+      //const content_name = document.getElementsByClassName(".promptEditContentname")[i];
+      //tbody[0].appendChild(tr);
+      }
+      $("#tableone").bootstrapTable({
+        pagination: true,   //是否显示分页条
+        pageSize:5 ,   //一页显示的行数
+        paginationLoop: false, 
+        sidepagination:'server',  //对于后端发来的数据有要求
+        pageList: [5, 10, 20] ,  //选择每页显示多少行，数据过少时可能会没有效果
+        toolbar:'#toolbar', 
+        columns:[
+            {
+              field: 'id',
+              title:'姓名',
+              align: 'center',
+              width:'205px'
+            },{
+              field:'title',
+              title:'学号',
+              align: 'left',
+              width:'205px',
+            },{
+              field:'root',
+              title:'邮箱',
+              align: 'left',
+              width:'205px',
+            },{
+              field:'time',
+              title:'ID',
+              align: 'left',
+              width:'205px',
+            },{
+              field:'motion',
+              title:'密码',
+              align: 'left',
+              width:'230px',
+            },{
+              field:'returnbook',
+              title:'待还书籍',
+              align: 'left',
+              width:'230px',
+            },{
+              field:'return',
+              title:'审核状态',
+              align: 'left',
+              width:'230px',
+            },{
+              field:'re',
+              title:'操作',
+              align: 'left',
+              width:'230px',
+            }
+          ] //自定义工具按钮
+        })
+    })
+});    
+//fengexian--------------------------
+</script>
+  <script src="读者管理.js" type="text/javascript"></script>
+  <script src="跳转.js" type="text/javascript"></script>
+</html>
