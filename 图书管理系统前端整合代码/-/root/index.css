@@ -1,0 +1,409 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    cursor: default;
+}
+.main {
+    width: 100%;
+    height: 1080px;
+    /* background-color: darkblue; */
+}
+.bac{
+    width: 1920px;
+    height: 1080px; 
+    background-image: url("https://typora--lv.oss-cn-beijing.aliyuncs.com/piggo/%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87.png" );
+    margin: auto;
+}
+.header{
+    width: 1920px;
+    height: 149px;
+    background-image: url("https://typora--lv.oss-cn-beijing.aliyuncs.com/piggo/7QXvOerPqY.png");
+}
+.logo{
+    width: 205px;
+    height: 44px;
+    /* background-color: aquamarine; */
+    position: relative;
+    background-image: url("https://typora--lv.oss-cn-beijing.aliyuncs.com/piggo/%E5%9B%BE%E5%B1%82%201.png");
+    left: 385px;
+    top: 35px;
+}
+.rec{
+    width: 3px;
+    height: 45px;
+    background-color: white;
+    position: relative;
+    left: 605px;
+    top: -12px;
+}
+.library{
+    width: 128px;
+    height: 50px;
+    position: relative;
+    left: 610px;
+    top: -62px;
+    text-align: center;
+    line-height: 50px;
+    color: white;
+    font-size: 35px;
+    font-weight: 500;
+}
+.search{
+    width: 65px;
+    height: 38px;
+    position: relative;
+    bottom: 190px;
+    left: 1500px;
+    color: white;
+    line-height: 38px;
+}
+.user{
+    width: 123px;
+    height: 38px;
+    position: relative;
+    bottom: 230px;
+    left: 1380px;
+    line-height: 38px;
+    color: white;
+}
+.nav{
+    width: 1150px;
+    height: 50px;
+    background-color: #e6e6e6;
+    position: relative;
+    top: -40px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    transition: color 0.6s;
+    font-weight: 800;
+    transition: background-color 0.6s;
+    letter-spacing: 2px;
+}
+.nav1:hover{
+    color: white;
+    background-image: linear-gradient(to right, #4ed9fc, #1fa4ec);
+}
+.nav1{
+    width: 297px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    transition: backgroundcolor 0.6s;
+}
+.list{
+    list-style-type: none;
+    background-color: #e6e6e6;
+    color: black;
+    display: block;
+    transition: background-color 0.6s;
+    transition: color 0.6s;
+}
+.list:hover{
+    background-color: #000083;
+    color: white;
+}
+.content{
+    background-image: url("https://typora--lv.oss-cn-beijing.aliyuncs.com/piggo/%E7%9F%A9%E5%BD%A2%205.png" );
+    width: 863px;
+    height: 350px;
+    position: relative;
+    left: 672px;
+    z-index: 1;
+    display: block;
+    top: -116px;
+}
+.content1 {
+    background-image: url("https://typora--lv.oss-cn-beijing.aliyuncs.com/piggo/5XqQjRe5pK.png");
+    width: 865px;
+    height: 175px;
+    position: relative;
+    top: 175px;
+    z-index: 2;
+}
+.collection{
+    width: 255px;
+    height: 115px;
+    color: white;
+    position: relative;
+    bottom: 175px;
+    line-height: 115px;
+    text-align: center;
+    font-size: 35px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    
+}
+.name{
+    width: 121px;
+    height: 20px;
+    position: relative;
+    bottom: 170px;
+    left: 50px;
+    outline-style: none;
+    border-radius: 8px;
+}
+.input{
+    width: 636px;
+    height: 40px;
+    position: relative;
+    bottom: 190px;
+    left: 190px;
+}
+.font{
+    width: 670px;
+    height: 50px;
+    position: relative;
+    bottom: 195px;
+    left: 30px;
+    text-align: center;
+    line-height: 60px;
+    color:white;
+}
+.bottom{
+    width: 240px;
+    height: 44px;
+    position: relative;
+    bottom: 150px;
+    left: 50px;
+    letter-spacing: 1px;
+    color: white;
+}
+.ddd{
+    font-size: 20px;
+    width: 123px;
+    height: 40px;
+    border-style: none;
+    font-weight: 400;
+    position: relative;
+    color: white;
+    bottom: 40px;
+    left: 513px;
+    background-image: url("https://typora--lv.oss-cn-beijing.aliyuncs.com/piggo/%E7%9F%A9%E5%BD%A2%203.png");
+    border-style: none;
+    outline-style: none;
+    border-radius: 8px;
+}
+.LoanManagement{
+    width: 1150px;
+    height: 412px;
+    /* background-color: saddlebrown; */
+    position: relative;
+    bottom: 115px;
+    left: 385px;
+    display: none;
+}
+.steer{
+    width: 265px;
+    height: 67px;
+    line-height: 67px;
+    letter-spacing: 1px;
+}
+.BorrowingTime{
+    width: 1150px;
+    height: 150px;
+    border-top: 3px solid #3375d5;
+    border-bottom: 3px solid #3375d5;
+}
+.confirm{
+    width: 155px;
+    height: 55px;
+    text-align: center;
+    line-height: 55px;
+}
+.Time{
+    width: 520px;
+    height: 40px;
+    position: relative;
+    left: 80px;
+    line-height: 40px;
+}
+.TobeReturn{
+    width: 100px;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    position: relative;
+    bottom: -10px;
+    left: 13px;
+}
+.choose{
+    width: 85px;
+    height: 25px;
+    -moz-box-shadow: inset 0 3px 8px rgba(0, 0, 0, .4);
+        -webkit-box-shadow: inset 0 3px 8px rgba(0, 0, 0, .4);
+        box-shadow: inset 0 3px 8px rgba(0, 0, 0, .24);
+        border: none;
+        outline-style: none;
+    text-indent: 5px;    
+    border-radius: 8px;
+}
+.date{
+    color:#888888;
+    font-weight:500;
+}
+.ConfirmButton{
+    width: 50px;
+    height: 25px;
+    background-color: #f39800;
+    color: white;
+    text-align: center;
+    line-height: 25px;
+    border: none;
+    border-radius: 8px;
+    position: relative;
+    left: 10px;
+    
+}
+.tips{
+    position: relative;
+    top: 150px;
+    color:#f19149;
+}
+.PersonalInformation{
+    width: 1150px;
+    height: 400px;
+    margin: auto;
+    position: relative;
+    bottom: 117px;
+    display: none;
+}
+.steer1 {
+    width: 180px;
+    height: 67px;
+    text-align: center;
+    line-height: 67px;
+    letter-spacing: 1px;
+    font-weight:600;
+}
+.form1{
+    width: 1150px;
+    height: 255px;
+    /* background-color: burlywood; */
+    border-top: 3px solid #3375d5;
+}
+.BottomConfirm{
+    width: 330px;
+    height: 45px;
+    background-color: #23a9ee;
+    position: relative;
+    margin: auto;
+    top: 35px;
+    border-radius: 8px;
+    line-height: 45px;
+    text-align: center;
+    color: white;
+    font-size: 19px;
+}
+.excel1{
+    width: 1150px;
+    height: 104px;
+    position: absolute;
+    top: 240px;
+}
+.table1{
+    width: 1150px;
+    height: 104px;
+    border: 1px solid #eae3d7;
+}
+.table2{
+    width: 1009px;
+    height: 210px;
+    background-color: #1fa4ec;
+    border: 0.5px solid d9d9d9;
+    margin: auto;
+    position: relative;
+    top: 40px;
+}
+.tableInputOne{
+    width: 151px;
+    height: 31px;
+    border: none;
+    outline-style: none;
+    font-size: larger;
+}
+.tableButton1{
+    width: 100px;
+    height: 25px;
+    background-color: #f39800;
+    border-radius: 8px;
+    color: white;
+    border: none;
+    font-size: 15px;
+    text-align: center;
+    margin: auto;
+}
+.excel2{
+    width: 1009px;
+    height: 209px;
+    /* background-color: violet; */
+    position: relative;
+    left: 70px;
+    top: 20px;
+    
+}
+.tableTwo{
+    margin: 0 auto;
+    border: 1px solid #eae3d7;
+    background-color: white;
+}
+.tableInputTwo{
+    width: 498px;
+    height: 35px;
+    border: none;
+    outline-style: none;
+    font-size: larger;
+}
+.div4{
+    width: 1150px;
+    height: 480px;
+    margin: auto;
+    position: relative;
+    bottom:100px ;
+    /* background-color: violet; */
+    display: none;
+}
+.steer1 {
+    width: 265px;
+    height: 67px;
+    line-height: 67px;
+    letter-spacing: 1px;
+    text-align: left;
+}
+.title{
+    width: 1150px;
+    height: 66px;
+    border-top: 3px solid #3375d5;
+    /* background-color:red; */
+    text-align: left;
+    line-height: 66px;
+}
+.chooseOne{
+    width:141px;
+    height: 25px;
+        -moz-box-shadow: inset 0 3px 8px rgba(0, 0, 0, .4);
+        -webkit-box-shadow: inset 0 3px 8px rgba(0, 0, 0, .4);
+    box-shadow: inset 0 3px 8px rgba(0, 0, 0, .24);
+    border: none;
+    outline-style: none;
+    text-indent: 5px;
+    border-radius: 8px;
+}
+.form2{
+    width: 1150px;
+    height: 345px;
+    /* background-color: #23a9ee; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.excel3{
+    width: 900px;
+    height: 300px;
+    background-color: white;
+}
+.tableTree{
+    width: 900px;
+    height: 300px;
+}

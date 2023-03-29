@@ -1,0 +1,80 @@
+*{
+    /* 初始化 */
+    margin: 0;
+    padding: 0;
+}
+body{
+    /* 200%窗口高度（两屏窗口的高度） */
+    height: 200vh;
+}
+.bg{
+    /* 背景图片 */
+    background-image: url("https://200307yjt.oss-cn-beijing.aliyuncs.com/%E5%9B%BE%E4%B9%A6%E7%AE%A1%E7%90%86%E9%A1%B9%E7%9B%AE/cbe96fbfcb1d4d6bb0678acaf8c6dcee.jpg");
+    /* 对图片进行剪切，保留原始比例 */
+    background-size: cover;
+    /* 设置背景图片的定位 */
+    background-position: 50% 10%;
+    height: 200vh;
+    font-size: 650px;
+    font-weight: 900;
+    text-align: center;
+    /* 相对定位 */
+    position: relative;
+    /* 以区块内的文字作为裁剪区域向外裁剪，文字的背景即为区块的背景，文字之外的区域都将被裁剪掉 */
+    -webkit-background-clip: text;
+    /* 将文字透明镂空 */
+    -webkit-text-fill-color: transparent;
+    overflow: hidden;
+    padding-top: 300px;
+}
+.bg::before{
+    content: "";
+    /* 背景图片继承父元素 */
+    background-image: inherit;
+    background-size: cover;
+    background-position: 50% 10%;
+    /* 绝对定位 */
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -99;
+}
+h2{
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    text-align: center;
+    letter-spacing: 8px;
+    color: #fff;
+}
+h1{
+    position: absolute;
+    top: 145vh;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    color: #fff;
+    letter-spacing: 10px;
+    padding: 100px 0;
+    text-align: center;
+    background-color: rgba(0,0,0,0.5);
+}
+.btn{
+    width: 200px;
+    height: 50px;
+    background-color:black;
+    opacity: 0.5;
+    color: white;
+    font-weight: 500;
+    font-size: x-large;
+    border-radius: 50px;
+    transition: 1s;
+    position: relative;
+    top: 50px;
+}
+.btn:hover{
+    width: 180px;
+    height: 40px;
+}

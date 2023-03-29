@@ -1,0 +1,675 @@
+#basement {
+  width: 100%;
+  height: 180%;
+  background-color: #f4f4f4;
+  overflow-y: hidden;
+}
+#basement_pic {
+  width: 100%;
+  height: 150%;
+  background-image: url("https://200307yjt.oss-cn-beijing.aliyuncs.com/%E5%9B%BE%E4%B9%A6%E7%AE%A1%E7%90%86%E9%A1%B9%E7%9B%AE/%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87%E5%A4%A7%E8%83%8C%E6%99%AF.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow-y: hidden;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+#centerArea {
+  width: 65%;
+  height: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#header {
+  height: 150px;
+  width: 100%;
+  background-color: #3375d5;
+  position: relative;
+}
+#navgation {
+  height: 50px;
+  width: 64%;
+  background-color: #39bef3;
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  bottom: 0px;
+  left: 18%;
+}
+#headerInfor {
+  height: 100px;
+  width: 64%;
+  position: absolute;
+  top: 0px;
+  left: 18%;
+}
+.yunding {
+  height: 44px;
+  width: 38%;
+  background-image: url("https://200307yjt.oss-cn-beijing.aliyuncs.com/%E5%9B%BE%E4%B9%A6%E7%AE%A1%E7%90%86%E9%A1%B9%E7%9B%AE/%E5%9B%BE%E6%A0%87.png");
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 0;
+  top: 36px;
+}
+.search {
+  width: 25.75%;
+  background-image: linear-gradient(to right, #4ed9fc,#1fa4ec);
+  text-align: center;
+  line-height: 50px;
+  font-size: larger;
+  color:white;
+  font-size:16px;
+}
+.nav {
+  width: 20%;
+  height: 50px;
+  background-color: #e6e6e6;
+  text-align: center;
+  line-height: 50px;
+  font-size: larger;
+  transition: 1s;
+  color:#999;
+  font-size:16px;
+}
+#navFour{
+  background-image: linear-gradient(to right, #4ed9fc,#1fa4ec );
+  color:white;
+}
+#nav2{
+  color: #3375d5;
+  display: none;
+  background-color: #e6e6e6;
+  color:#999;
+  font-size:16px;
+}
+.nav:hover{
+  background-image: linear-gradient(to right, #4ed9fc,#1fa4ec );
+  color:white;
+}
+.nav:hover #nav2{
+  display: block;
+}
+#searchSkip {
+  width: 50px;
+  height: 15px;
+  color: white;
+  position: absolute;
+  right: 0;
+  text-align: right;
+  background-image: url("https://200307yjt.oss-cn-beijing.aliyuncs.com/%E5%9B%BE%E4%B9%A6%E7%AE%A1%E7%90%86%E9%A1%B9%E7%9B%AE/%E6%90%9C%E7%B4%A2.png");
+  background-position: 8px 2px;
+  background-repeat: no-repeat;
+}
+#searchSkip:hover {
+  color: #24a8ed;
+}
+#about {
+  width: 50px;
+  height: 15px;
+  color: #f4f4f4;
+  position: absolute;
+  right: 65px;
+  text-align: right;
+  background-repeat: no-repeat;
+}
+#about:hover {
+  color: #24a8ed;
+}
+.pic {
+  height: 100px;
+  width: 45%;
+  background-image: url("https://200307yjt.oss-cn-beijing.aliyuncs.com/%E5%9B%BE%E4%B9%A6%E7%AE%A1%E7%90%86%E9%A1%B9%E7%9B%AE/%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86_02.jpg");
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 35%;
+}
+html,body {
+  width: 100%;
+  height: 100%;
+}
+.img {
+  width: 100%;
+  height: 132%;
+  background: url("https://200307yjt.oss-cn-beijing.aliyuncs.com/%E5%9B%BE%E4%B9%A6%E7%AE%A1%E7%90%86%E9%A1%B9%E7%9B%AE/%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87%E5%A4%A7%E8%83%8C%E6%99%AF.jpg")
+    no-repeat;
+  background-size: 100% 100%;
+  background-attachment: scroll;
+}
+#line_1{
+  background-color:#3375d5;
+  height: 10px;
+  width: 90%;
+  margin-top: 10px;
+}
+.bookManagementReaderManagementTop{
+  height: 52px;
+  width: 100%;
+  font-size: 14px;
+}
+
+.bookManagementReaderManagementTopSel{
+  border-bottom: 4px solid #3275D4;
+  padding-bottom: 12px;
+  padding-top: 20px;
+}
+
+.bookManagementReaderManagementTopSel > li {
+  font-size: 18px;
+  display: inline-block;
+  font-weight: 600;
+}
+
+.bookManagementReaderManagementTopSel>li+li:before {
+  padding: 0 5px;
+  color: #ccc;
+  content: "/\00a0";
+  font-weight: 600;
+}
+
+.bookManagementReaderManagementTopSel > .active {
+  color: #3275D4;
+  font-weight: 1000px;
+}
+#numChecking{
+  margin-top: 10px;
+  width: 96%;
+  height: 130px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content:space-between
+}
+#numChecking_box{
+  width: 20%;
+  border-radius:20px;
+  transition: 1s;
+}
+.reader{
+  background-color: #67c23a;
+}
+#numChecking_box:hover{
+  width: 30%;
+}
+.books{
+  background-color:#409eff;
+}
+.waitForCheck{
+  background-color:#e6a23c;
+}
+.borrowed{
+  background-color:#f56c6c;
+}
+.header{
+  background-color: black;
+  width: 100%;
+  height: 25%;
+  opacity: 0.3;
+  border-top-left-radius:20px;
+  border-top-right-radius:20px;
+}
+.header_char{
+  width: 50%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  color:white;
+  text-align: center;
+  line-height:35px;
+  font-size: x-large;
+}
+.reader_num{
+  width: 55%;
+  height: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  font-size: xx-large;
+  text-align: center;
+  color: white;
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+}
+.reader_char{
+  position:absolute;
+  height: 25px;
+  right: 5px;
+  bottom: 10px;
+  font-size:small;
+}
+.books_num{
+  width: 55%;
+  height: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  font-size: xx-large;
+  text-align: center;
+  color: white;
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+}
+.books_char{
+  position:absolute;
+  height: 25px;
+  right: 5px;
+  bottom: 10px;
+  font-size:small;
+}
+.waitForCheck_num{
+  width: 55%;
+  height: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  font-size: xx-large;
+  text-align: center;
+  color: white;
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+}
+.waitForCheck_char{
+  position:absolute;
+  height: 25px;
+  right: 5px;
+  bottom: 10px;
+  font-size:small;
+}
+.borrowed_num{
+  width: 55%;
+  height: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  font-size: xx-large;
+  text-align: center;
+  color: white;
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+}
+.borrowed_char{
+  position:absolute;
+  height: 25px;
+  right: 5px;
+  bottom: 10px;
+  font-size:small;
+}
+#borrowCheckingTable{
+  width: 96%;
+  height:450px ;
+  margin-left: auto;
+  margin-right: auto;
+}
+#container {
+  height: 400px;
+  width: 650px;
+  background-color: azure;
+}
+.fashionBooks{
+  width:45% ;
+  height: 100%;
+  background-color:#f4f4f4;
+}
+#bgc_white{
+  background-color: white;
+  width: 95%;
+  height: 300px;
+  margin-top:0px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#bgc_grey{
+  background-color:#e6e6e6;
+  width: 95%;
+  height: 46px;
+  margin-top:30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.bookManagementIndexContainer{
+    height: 100%;
+    width: 100%;
+    background-position:center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+#secd {
+    background-color: #4ed9fb;
+    background-image: linear-gradient(to right,#4ed9fb,#1fa4ec);
+}
+
+.Content {
+    width: 1200px;
+    height: 95%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.bookManagementReaderManagement {
+    height: 472px;
+    width: 98%;
+}
+
+.bookManagementReaderManagementTop{
+    height: 52px;
+    width: 99%;
+    font-size: 14px;
+}
+
+.bookManagementReaderManagementTopSel{
+    border-bottom: 4px solid #3275D4;
+    padding-bottom: 12px;
+    padding-top: 20px;
+}
+
+.bookManagementReaderManagementTopSel > li {
+    font-size: 17px;
+    display: inline-block;
+    font-weight: 100;
+}
+
+.bookManagementReaderManagementTopSel>li+li:before {
+    padding: 0 5px;
+    color: #ccc;
+    content: "/\00a0";
+}
+
+.bookManagementReaderManagementTopSel > .active {
+    color: #3275D4;
+}
+
+.bookManagementReaderManagementInquire {
+    top: 16px;
+    position: relative;
+}
+
+.readerInput {
+  margin-right: 38px;
+  width: 140px;
+  border-radius: 5px;
+  font-size:1rem;
+  align-items: center;
+}
+input{
+  position: relative;
+}
+input[type="text"]::-webkit-input-placeholder{
+  font-size:10px;
+  padding-left: 15px;
+}
+#readerInquire {
+    width: 72px;
+    background-color: #556fb5;
+    color: white;
+    border: 0;
+    height: 25px;
+    border-radius: 5px;
+}
+#readerInquire:hover{
+   background-color:cornflowerblue;
+}
+
+.bookManagementReaderManagementInquireTable{
+    position: relative;
+    top: -365px;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.table {table-layout:auto;word-break:break-all}
+
+#tableone {
+    border-spacing: 0;
+    border-collapse: collapse;
+    border:1px solid #e1dfda;
+    text-align: center;
+    table-layout:auto;
+}
+
+#tableone > tbody >tr {
+    height:34px;
+}
+
+
+.editButton ,
+.checkButton ,
+.deleteButton {
+    color: white;
+    background-color: #00b7ee;
+    height: 25px;
+    width: 72px;
+    border-radius: 5px;
+    border: 0;
+    z-index: 1;
+    position: relative;
+    transition: 1s;
+}
+.editButton:hover ,
+.checkButton:hover,
+.deleteButton:hover{
+    background-color:#3375d5;
+}
+.checkyes {
+    width: 72px;
+    height: 34px;
+    color: #24aaee;
+    border-radius: 5px;
+    border: 0;
+    background-color: #c3e8f3;
+}
+
+.checkno {
+    width: 72px;
+    height: 34px;
+    color: white;
+    border-radius: 5px;
+    border: 0;
+    background-color: #da6e77;
+}
+
+.demo-bgone,
+.demo-bgtwo {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 5;
+        width: 100%;
+        height: 2000px;
+        background-color: rgba(
+          0,
+          0,
+          0,
+          0.3
+        ); /*实现透明背景------------------------*/
+        display: none;
+      }
+
+.promptEdit {
+    width: 520px;
+    height: 520px;
+    position: absolute;
+    left: 500px;
+    top: 280px;
+    overflow: hidden;
+    border-radius: 10px;
+    z-index: 10;
+    display: none;
+}
+
+.promptEditTop {
+    background-color: #3375d5;
+    width: 520px;
+    height: 50px;
+    font-size: 14px;
+    color: white;
+    line-height: 50px;
+    text-align: center;
+}
+
+.promptEditTopTitle {
+    float: left;
+    margin-left: 20px;
+    line-height: 50px;
+}
+
+.promptEditTopClose {
+    float: right;
+    margin-right: 20px;
+    line-height: 50px;
+    background-color: transparent;
+    border: 0;
+}
+
+.promptEditContent {
+    color: black;
+    background-color: white;
+    position: relative;
+}
+
+.promptEditContentform {
+    top: 20px;
+    left: 40px;
+    height: 350px;
+    width: 450px;
+    position: relative;
+}
+
+.promptEditContentname,
+.promptEditContentgender,
+.promptEditContentclass,
+.promptEditContentid,
+.promptEditContentschoolid,
+.promptEditContentcheck,
+.promptEditContentstart {
+    line-height: 25px;
+    margin-top: 10px;
+    width: 330px;
+    height: 25px;
+}
+
+.promptcheck{
+    width: 241px;
+    height: 181px;
+    position: absolute;
+    top: 357px;
+    left: 744px;
+    
+    z-index: 10;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.promptcheckTop {
+    height: 40px;
+    width: 100%;
+    background-color: #3375d5;
+    text-align: center;
+    position: relative;
+    color: white;
+    line-height: 40px;
+}
+
+.promptcheckContent {
+    position: relative;
+    background-color: white;
+    height: 141px;
+    color: white;  
+}
+
+.promptcheckContentok {
+    width: 96px;
+    height: 31px;
+    background-color: #009e96;
+    left: 16px;
+    top: 15px;
+    position: relative;
+    border: 0;
+    border-radius: 5px;
+    color: white;  
+}
+
+.promptcheckContentno {
+    width: 96px;
+    height: 31px;
+    background-color: #f39800;
+    right: -25px;
+    top: 15px;
+    position: relative;
+    border: 0;
+    border-radius: 5px;
+    color: white;  
+}
+
+.promptcheckTopClose {
+    height: 40px;
+    width: 211px;
+    top: 30px;
+    background-color: #4ed9fb;
+    background-image: linear-gradient(to right,#4ed9fb,#1fa4ec);
+    position: relative;
+    border: 0;
+    left: 16px;
+    border-radius: 5px;
+    color: white;  
+}
+#search_test{
+  width: 500px;
+  background-color:#24a8ed;
+}
+.img {
+  width: 100%;
+  height: 155%;
+  background: url("https://200307yjt.oss-cn-beijing.aliyuncs.com/%E5%9B%BE%E4%B9%A6%E7%AE%A1%E7%90%86%E9%A1%B9%E7%9B%AE/%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87%E5%A4%A7%E8%83%8C%E6%99%AF.jpg")
+    no-repeat;
+  background-size: 100% 100%;
+  background-attachment: scroll;
+}
